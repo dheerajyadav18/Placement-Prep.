@@ -72,6 +72,7 @@ string s1 = "Dheeraj";
 string s2 = "Yadav";
 s1+=s2; //No extra space is used to add
 s1 = s1+s2; //Creates Copy of the s1 then adds s2
+str.append(str2);
 cout<<s1+s2<<endl;
 
  // strcat() function are used to concatinate char arrays
