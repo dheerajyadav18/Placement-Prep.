@@ -28,6 +28,54 @@ int main()
    getline(cin,str3);
    cout<<str3<<endl;
 
+// Indexing From 0 and at last index there is ''\0"
+// ASCII Values
+// A-Z (65-90)
+// a-z (97-122)
+
+char ch = 'a';
+cout<<int(ch)<<endl;
+
+char chA = 'A';
+cout<<int(chA)<<endl;
+
+    return 0;
+}
+
+```
+
+```
+
+#include <iostream>
+#include<string>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+// Rerverse() Function -> Time Complexity: O(length of a string)
+
+string str = "Dheeraj";
+reverse(str.begin(), str.end());
+cout<<str<<endl;
+
+// substr() Function -> Time Complexity: O(length)
+
+string str = "Dheeraj";
+cout<<str.substr(0,4)<<endl;
+cout<<str.substr(4)<<endl;
+
+// "+" operator
+
+string s1 = "Dheeraj";
+string s2 = "Yadav";
+s1+=s2; //No extra space is used to add
+s1 = s1+s2; //Creates Copy of the s1 then adds s2
+cout<<s1+s2<<endl;
+
+
+
     return 0;
 }
 ```
