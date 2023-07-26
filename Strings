@@ -1,1 +1,3 @@
 #Strings
+What is a CPP string?
+A C++ string is an object that is a part of the C++ standard library. It is an instance of a “class” data type, used for convenient manipulation of sequences of characters. To use the string class in your program, the <string> header must be included
