@@ -119,5 +119,75 @@ int main()
 }
 ```
 
+```
+
+// WAP to sort a string //using count sort // T.C = O(n) // S.C = O(26)
+// input = "dbaac";
+// output = "aabcd";
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string countSort(string str)
+{
+   vector<int>freq(26,0);
+   for(int i=0; i<str.length(); i++){
+       int ch = str[i]-'a';
+       freq[ch]++;
+   }
+   int j = 0;
+   for(int i=0; i<26; i++){
+       while(freq[i]--){
+         str[j++] = i+'a';
+       }
+   }
+   return str;
+}
+
+int main()
+{
+    string str = "dbaac";
+    cout<<countSort(str)<<endl;
+    return 0;
+}
+```
+```
+
+// WAP to check anagram or not  // T.C = O(length of strings) S.C = O(1)
+// we have to strings 1: anagram 2: nagaram after sort both are same so that it is true 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool AnagranCheck(string str1, string str2 )
+{
+    if(str1.length()!=str2.length()){
+        return false;
+    }
+   vector<int> freq(26,0);
+   for(int i=0; i<str1.length(); i++){
+       freq[str1[i]-'a']++;
+       freq[str2[i]-'a']--;
+   }
+   for(int i=0; i<26; i++){
+       if(freq[i]!= 0) return false;
+   }
+   return true;
+
+}
+
+int main()
+{
+    string str1 = "anagram";
+    string str2 = "nagaram";
+    if(AnagranCheck(str1, str2)){
+        cout << "true, anagram" << endl;
+    }
+    else cout<<"false, not anagram"<<endl;
+    return 0;
+}
+```
+
+
 
 
