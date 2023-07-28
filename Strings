@@ -87,3 +87,37 @@ cout<<s1+s2<<endl;
 }
 ```
 
+```
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    // string s1 = "ABCD"; //use double quets for string
+    char ch = 'E';      // single quets for char
+    s1.push_back(ch);
+    cout<<s1<<endl;
+    
+    // Size() function  => time complexity : 0(1);
+    string s1 = "abcd";
+    cout<<s1.size()<<endl;   //same
+    cout<<s1.length()<<endl; //same
+    
+    char a[20] = "abcde";
+    cout<<strlen(a)<<endl;
+    
+    // to_string() it is used to convert num to string
+    int a = 200;
+    string str = to_string(a);
+    char b = '2';
+    str+=b;
+    cout<<str<<endl;
+
+    return 0;
+}
+```
+
+
+
